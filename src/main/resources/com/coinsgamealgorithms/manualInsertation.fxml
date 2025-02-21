@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.coinsgamealgorithms.ManualInsertationController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <!-- ListView to display all coins -->
+    <ListView fx:id="coinListView" maxWidth="-Infinity" prefHeight="358.0" prefWidth="255.0" />
+
+    <!-- Input field and buttons for managing coins -->
+    <TextField fx:id="coinInputField" maxWidth="-Infinity" prefHeight="51.0" prefWidth="230.0" promptText="Enter coin value" />
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="addCoinButton" text="Add Coin" />
+        <Button fx:id="updateCoinButton" text="Update Coin" />
+        <Button fx:id="resetButton" text="Reset Coins" />
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin>
+    </HBox>
+
+    <!-- Save and Return button to go back to the previous scene -->
+    <Button fx:id="saveAndReturnButton" text="Save and Return" />
+</VBox>

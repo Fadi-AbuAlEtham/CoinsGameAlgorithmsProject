@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bdPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.coinsgamealgorithms.InsertingOptionsController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css">
+         <children>
+            <Button fx:id="btManual" alignment="CENTER" mnemonicParsing="false" onAction="#onManualClicked" prefHeight="131.0" prefWidth="350.0" text="Manual" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="39.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="118.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@manualInsertingPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btRandom" alignment="CENTER" layoutX="157.0" layoutY="130.0" mnemonicParsing="false" onAction="#onRandomClicked" prefHeight="138.0" prefWidth="350.0" text="Random" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="118.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@randomInsertingPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btFile" alignment="CENTER" layoutX="157.0" layoutY="173.0" mnemonicParsing="false" onAction="#onFileClicked" prefHeight="136.0" prefWidth="350.0" text="Load From File" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="118.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@loadFromFilePic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <Label fx:id="headerLabel" style="-fx-font-family: 'Georgia'; -fx-font-size: 70px; -fx-text-fill: #FFD54F;" text="Choose the Way of Inserting Coins" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <bottom>
+      <Button fx:id="btMainMenu" mnemonicParsing="false" onAction="#onMainMenuClicked" prefHeight="141.0" prefWidth="344.0" text="Main Menu" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </BorderPane.margin>
+         <graphic>
+            <ImageView fitHeight="116.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@mainMenuPic.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </bottom>
+</BorderPane>

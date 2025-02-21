@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bdGameScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="757.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.coinsgamealgorithms.TwoPlayersGameController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <right>
+      <VBox fx:id="flowPane" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="lblPlayerTwoScore" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="custom-text" text="Player 2: ">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtPlayerTwoScore" editable="false" prefHeight="37.0" prefWidth="94.0" promptText="0" style="-fx-background-color: #F0E68C;">
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="7.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="958.0" prefWidth="155.0">
+               <children>
+                  <ScrollPane fx:id="scrollPanePlayerTwo" fitToHeight="true" fitToWidth="true">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                     <content>
+                        <VBox fx:id="vbPlayerTwoGameCoins" alignment="CENTER" prefHeight="275.0" prefWidth="100.0" spacing="10.0" style="-fx-border-color: white; -fx-background-radius: 30; -fx-border-radius: 30;">
+                           <padding>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <VBox fx:id="vbPlayerTwoGameScene" alignment="CENTER" prefHeight="200.0" prefWidth="76.0" spacing="10.0">
+                     <children>
+                        <Text fx:id="lblPlayerTwoName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 19px;" styleClass="custom-text" text="Player 2" />
+                        <ImageView fx:id="playerTwoImage" fitHeight="250.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@player_two_icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="lblPlayerOneScore" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" styleClass="custom-text" text="Player 1: ">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtPlayerOneScore" editable="false" prefHeight="37.0" prefWidth="95.0" promptText="0" style="-fx-background-color: #F0E68C;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="7.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="947.0" prefWidth="155.0">
+               <children>
+                  <VBox fx:id="vbPlayerOneGameScene" alignment="CENTER" prefHeight="200.0" prefWidth="76.0" spacing="10.0">
+                     <children>
+                        <Text fx:id="lblPlayerOneName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 19px;" styleClass="custom-text" text="Player 1" />
+                        <ImageView fx:id="playerOneImage" fitHeight="250.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@player_one_icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <ScrollPane fx:id="scrollPanePlayerOne" fitToHeight="true" fitToWidth="true">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                     <content>
+                        <VBox fx:id="vbPlayerOneGameCoins" alignment="CENTER" prefHeight="275.0" prefWidth="100.0" spacing="10.0" style="-fx-border-color: white; -fx-background-radius: 30; -fx-border-radius: 30;">
+                           <padding>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="580.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btMainMenu" mnemonicParsing="false" onAction="#onMainMenuClicked" text="Main Menu">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@mainMenuPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btReset" mnemonicParsing="false" onAction="#onResetClicked" text="Reset">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resetPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btRestart" mnemonicParsing="false" onAction="#onRestartClicked" text="Restart">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@restartPic.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <FlowPane fx:id="flowPaneGameScene" alignment="CENTER" columnHalignment="CENTER" hgap="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+            </FlowPane>
+         </content>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ScrollPane>
+   </center>
+</BorderPane>
